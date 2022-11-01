@@ -1,12 +1,10 @@
 export const getDataAPI = async () => {
   try {
-    const response = await fetch(
-      "https://gateway.marvel.com/v1/public/characters?ts=1&apikey=b3ce192b6a683039e79389620bdd2a2e&hash=e553d9dd0a483a2e730d5e6d3c8b3239"
-    );
+    const response = await fetch("https://randomuser.me/api/?results=20");
 
-    const { data } = await response.json();
+    const { results } = await response.json();
 
-    return { data, error: false };
+    return { data: results, error: false };
   } catch (error) {
     return { data: [], error };
   }
