@@ -1,4 +1,4 @@
-export const getDataAPI = async () => {
+export const getData = async () => {
   try {
     const response = await fetch("https://randomuser.me/api/?results=20");
 
